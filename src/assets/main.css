@@ -1,35 +1,46 @@
-@import './base.css';
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+/* @import './base.css'; */
+body {
+  font-family: monospace;
+  padding: 20px;
+  font-size: 16px;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.photo {
+  position: relative;
+  border: 1px solid #ccc;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+.photo img {
+  width: 100%;
+  display: block;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.favorite-button {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 24px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.favorite-button.active {
+  color: gold;
+}
+
+.no-photos {
+  text-align: center;
+  color: #999;
+}
+
+form {
+  margin-bottom: 20px;
 }
